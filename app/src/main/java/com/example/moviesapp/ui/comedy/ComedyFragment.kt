@@ -1,4 +1,4 @@
-package com.example.moviesapp.ui.dashboard
+package com.example.moviesapp.ui.comedy
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.moviesapp.R
 
-class DashboardFragment : Fragment() {
+class ComedyFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var comedyViewModel: ComedyViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(this, Observer {
+        comedyViewModel =
+            ViewModelProviders.of(this).get(ComedyViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_comedy, container, false)
+        val textView: TextView = root.findViewById(R.id.text_comedy)
+        comedyViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

@@ -1,4 +1,4 @@
-package com.example.moviesapp.ui.home
+package com.example.moviesapp.ui.series
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,22 +10,23 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.R
+import com.example.moviesapp.ui.comedy.SeriesViewModel
 
-class HomeFragment : Fragment() {
+class SeriesFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var seriesViewModel: SeriesViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val moviesList: RecyclerView = root.findViewById(R.id.movies_recyclerView)
-        homeViewModel.text.observe(this, Observer {
-//            moviesList.text = it
+        seriesViewModel =
+            ViewModelProviders.of(this).get(SeriesViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_series, container, false)
+        val textView: TextView = root.findViewById(R.id.text_series)
+        seriesViewModel.text.observe(this, Observer {
+            textView.text = it
         })
         return root
     }
