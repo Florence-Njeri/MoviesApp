@@ -10,13 +10,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
-        android:layout_margin="0dp">
+        >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/movies_recyclerView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:orientation="vertical"
             android:scrollbars="vertical"
             android:clipToPadding="false"
