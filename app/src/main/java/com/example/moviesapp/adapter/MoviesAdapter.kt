@@ -35,7 +35,7 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
             movieImage.setImageResource(R.drawable.aquaman)
             movieTitle.text = "Aquaman"
             releaseYear.text = "2018"
-            ratingBar.numStars= 3.5.toInt()
+            ratingBar.numStars= 5
         }
     }
 }

@@ -34,7 +34,7 @@ class MoviesFragment : Fragment() {
 //            it?.let {
 ////                adapter.data= it
 //            }
-//        })
+//        }
         return binding.root
     }
 }
