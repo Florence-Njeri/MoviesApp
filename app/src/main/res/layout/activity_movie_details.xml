@@ -56,8 +56,10 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <include
+            android:id="@+id/layout"
             layout="@layout/content_movie_detailsg"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
